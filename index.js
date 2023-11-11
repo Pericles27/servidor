@@ -7,7 +7,8 @@ import ADRs from "./Funciones/ADRs.js";
 import cors from "cors";
 const app = express();
 const port = 3000;
-app.use(cors());
+
+app.use(cors({ origin: "https://arg-cotizaciones.netlify.app" }));
 
 app.get("/", (req, res) => {
     res.send("<h1>Bienvenido al servidor hecho con express</h1>")
